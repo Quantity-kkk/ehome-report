@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0}
+.tableshuxing{border-collapse: collapse;}
+.tableshuxing td{ border:1px solid #808080; height:20px; font-size:12px;}
+.tableshuxing select{ border:none; outline:none;font-size:12px;}
+.tableshuxing input{ border:none; outline:none; width:40px;font-size:12px;}
+.tableshuxing .tdtitle{ font-size:12px; font-weight:bold;}
+.tableshuxing .xuanze{ text-align:center;}
+.tableshuxing .trtitle{}
+.trtitle a{ width:14px; height:17px; display:block; background-image:url(../lib/ztree/img/zTreeStandard.gif); background-repeat:no-repeat;background-position:-93px -2px;}
+.trtitle .ajiahao{background-position:-75px -2px;}
+.tableshuxing .trbody{}
+.tableshuxing .miss{ display:none;}
+.trbody .alinecenter{ width:14px; height:17px; display:block; background-image:url(../lib/ztree/img/zTreeStandard.gif); background-repeat:no-repeat; background-position:-57px -19px;}
+.trbody .alineunder{ width:14px; height:17px; display:block; background-image:url(../lib/ztree/img/zTreeStandard.gif); background-repeat:no-repeat; background-position:-57px -37px;}
+.trbody .ashuxingbgcolor{ width:26px; height:14px; display:block; color:#fff; border:1px solid #808080; margin:0 auto;} 
+#aaa{ height:200px;  width:200px; position:absolute; left:0px; top:0px; border:1px solid #ccc; background-color:#505050;}
+.danyuange{ position:relative;}
+.shuxingleftcolor{ background-color:#eee;}
+.sp-dd{ height:8px;}
+.sp-preview{ height:14px;}
+.sp-replacer{ padding:2px;}
+.sera{display:none}

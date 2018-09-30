@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+<!-- 开发模式 -->
+	<constant name="struts.devMode" value="false"/>
+	<constant name="struts.xwork.chaining.copyErrors" value="true"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<constant name="struts.action.extension" value="action"/> 
+	
+	
+	<!--struts-cms-->
+    <package name="struts-cms" abstract="true" extends="struts-default,json-default"  
+        namespace="/">  
+       <interceptors>
+			<interceptor class="report.java.base.interceptor.AuthenticationInterceptor" name="authorityValidate"/>
+			<interceptor-stack name="cms-base-interceptors">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="authorityValidate">
+					<param name="excludeMethods">
+						login,logout
+					</param>
+				</interceptor-ref>
+				
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param>
+					<param name="logLevel">ERROR</param>
+				</interceptor-ref>
+				
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="cms-base-interceptors"/>
+		<global-results>
+			<result name="noLogin">
+				/report/common/noLoginException.jsp
+			</result>
+			<result name="noAuthority">
+				/report/common/noAuthorityException.jsp
+			</result>
+			<result name="commonException">
+				/report/common/exception.jsp
+			</result>
+			<result name="invalid.token">
+				/report/common/commitRepeat.jsp
+			</result>
+		</global-results>    
+    </package>
+      <!--struts-ajax-->
+    <package name="struts-ajax" abstract="true" extends="struts-default,json-default" namespace="/"> 
+    	<interceptors>
+			<interceptor class="report.java.base.interceptor.AuthenticationInterceptorAjax" name="authorityValidateAjax"/>
+			<interceptor-stack name="cms-base-interceptorsAjax">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="authorityValidateAjax">
+					<param name="excludeMethods">
+						loginAjax,previewDesignNew
+					</param>
+				</interceptor-ref>
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param>
+					<param name="logLevel">ERROR</param>
+				</interceptor-ref>
+				<interceptor-ref name="store">
+					<param name="operationMode">AUTOMATIC</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="cms-base-interceptorsAjax"/>
+		<global-results>
+			<result name="noLogin" type="chain">sessionFailure</result>
+			<result name="commonProcessing" type="chain">
+			   <param name="actionName">otherSysSituation</param> 
+	       </result>
+		</global-results>
+    </package>  
+    
+      <!-- 包含的配置文件 -->  
+    <include file="report/java/design/struts/struts-Design.xml"></include>
+    <include file="report/java/jrreport/struts/struts-Report.xml"></include>
+    <include file="report/java/login/struts/struts-Login.xml"></include>
+    <include file="report/java/rpt/struts/struts-Rpt.xml"></include>
+    <include file="report/java/admin/struts/struts-Admin.xml"></include>
+	
+</struts>

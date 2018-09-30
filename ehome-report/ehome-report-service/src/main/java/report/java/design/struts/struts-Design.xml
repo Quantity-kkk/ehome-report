@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="DesignActionAjax" namespace="/" extends="struts-ajax">
+		<action class="report.java.design.action.DataSourceAction"
+			method="getDataSourceNameAll" name="getDataSourceNameAll">
+			<result name="success" type="json">
+				<param name="root">dataSourceBeanList</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="getDataTableNameAll" name="getDataTableNameAll">
+			<result name="success" type="json">
+				<param name="root">tableList</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="parFields" name="parFields">
+			<result name="success" type="json">
+				<param name="contentType">text/html</param>
+				<param name="root">dataSetsModel</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="parFieldsForJSON" name="parFieldsForJSON">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="getTableInfo" name="getTableInfo">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="getColumnsInfo" name="getColumnsInfo">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="selectDic" name="selectDic">
+			<result name="success" type="json">
+				<param name="contentType">text/html</param>
+				<param name="root">dataSetsModel</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="getFieldNames" name="getFieldNames">
+			<result name="success" type="json">
+				<param name="root">fieldList</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DataSourceAction"
+			method="convertDataFormat" name="convertDataFormat">
+			<result name="success" type="json">
+				<param name="contentType">text/html</param>
+				<param name="root">dataSetsModel</param>
+			</result>
+		</action>
+			<action class="report.java.design.action.DesignAction" method="saveDesignXML"
+			name="saveDesignXML">
+			<result name="success" type="json">
+				<param name="contentType">text/html</param>
+				<param name="root">message</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DesignAction" method="openDesignXML"
+			name="openDesignXML">
+			<result name="success" type="json">
+				<!-- <param name="contentType">text/html</param> -->
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DesignAction" method="updateDesignXML"
+			name="updateDesignXML">
+			<result name="success" type="json">
+				<param name="contentType">text/html</param>
+				<param name="root">message</param>
+			</result>
+		</action>
+		<!-- 导入模板 -->
+		<action name="importExcelAction" class="report.java.design.action.ImportExcelAction"
+			method="importExcel">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DesignAction" method="selectAllReportFile"
+			name="selectAllReportFile">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<action class="report.java.design.action.DesignAction" method="selectAllParmsByUUID"
+			name="selectAllParmsByUUID">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		
+		<action class="report.java.design.action.ConfigAction" method="saveReport"
+			name="saveReport">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		
+		<action class="report.java.design.action.ConfigAction" method="selectReport"
+			name="selectReport">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		
+	</package>
+	<package name="DesignAction" namespace="/report/design"
+		extends="struts-cms">
+		<action class="report.java.design.action.DataSourceAction"
+			method="selectDataSourceAllForSet" name="selectDataSourceAllForSet">
+			<result name="success">/report/design/rptTabConfig_add.jsp</result>
+		</action>
+		
+	</package>
+</struts>

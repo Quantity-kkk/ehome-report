@@ -1,0 +1,369 @@
+[
+	{
+		"name": "仪表盘报表",
+		"icon": "img/iconBb1.png",
+		"tip": "",
+		"children": [
+			{
+				"name": "管理驾驶舱",
+				"icon": "",
+				"url": "charts/demoCharts?chartType=gauge_1"
+			},
+			{
+				"name": "数据源中心驾驶舱",
+				"icon": "",
+				"url": "charts/demoCharts?chartType=gauge_2"
+			},
+			{
+				"name": "人力资源统计",
+				"icon": "",
+				"url": "charts/demoCharts?chartType=gauge_3"
+			},
+			{
+				"name": "数据统计",
+				"icon": "",
+				"url": "charts/demoCharts?chartType=gauge_4"
+			}
+		]
+	},
+	{
+		"name": "交叉报表",
+		"icon": "img/iconBb2.png",
+		"tip": "",
+		"children": [
+			{
+				"name": "客户与产品交叉报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=1ea3e7ef2e8d9bd9a44ba3f24a1417de",
+				"edit":"uuid=1ea3e7ef2e8d9bd9a44ba3f24a1417de"
+			},
+			{
+				"name": "客户与商品交叉报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=74e001e784432cdabe97e36271960946"
+			},
+			{
+				"name": "评级交叉报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=d6e1e4a89463bd8613df8b41929e17fa",
+				"tiaozhanbaobiao":"demoshow_nosearch?reporttype=D&skinType=0&uid=b845853e8e02153be9d17a6494a5ebba&editReport="
+			}
+		]
+	},
+	{
+		"name": "分组报表",
+		"icon": "img/iconBb3.png",
+		"children": [
+			{
+				"name": "地域客户信息报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=04c65e333d6c8cf1e006c054f8d6158b"
+			},
+			{
+				"name": "用户部门分组报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=cf9b2a7901fc2b9af0e7f4a2b80fbf48"
+			},
+			{
+				"name": "复杂分组报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=3d7b98564a7505012f8a40548649ca29"
+			}
+		]
+	},
+	{
+		"name": "多级表头报表",
+		"icon": "img/iconBb4.png",
+		"children": [
+			{
+				"name": "二级表头报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=3d7b98564a7505012f8a40548649ca29"
+			},
+			{
+				"name": "多级表头报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=a16429e74d181cef2c24ed3fe72fcab8"
+			},
+			{
+				"name": "动态多级表头报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=f004ff76e9e10b6b7d4ecb396608ee0a"
+			}
+		]
+	},
+	{
+		"name": "动态表头报表",
+		"icon": "img/iconBb5.png",
+		"children": [
+			{
+				"name": "动态列（单列）",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=dec6cc96d364b1be44569ae181a3eac6"
+			},
+			{
+				"name": "多级表头动态列（单列）",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=d354a3beb6dae7938155b3f9a962e479"
+			},
+			{
+				"name": "多级表头动态列（多列）",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=f004ff76e9e10b6b7d4ecb396608ee0a"
+			},
+			{
+				"name": "多级表头动态列（混合）",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=44e1a7429ae34ffc66120347d12c4e36"
+			}
+		]
+	},
+	{
+		"name": "大屏幕报表",
+		"icon": "img/iconBb17.png",
+		"tip": "iconTip",
+		"children": [
+			{
+				"name": "电子渠道运营分析",
+				"icon": "",
+				"url": "charts/customer?chartType=bigdata3",
+				"oldurl": "charts/bigdataImg?imgUrl=9.jpg"
+			},
+			{
+				"name": "交通流量分析",
+				"icon": "",
+				"url": "charts/customer?chartType=bigdata"
+			},
+			{
+				"name": "交易组合报表",
+				"icon": "",
+				"url": "charts/customer?chartType=tab-char"
+			},
+			{
+				"name": "违法有害信息监测",
+				"icon": "",
+				"url": "charts/customer?chartType=bigdata4",
+				"oldurl": "charts/bigdataImg?imgUrl=6.jpg"
+			}
+		]
+	},
+	{
+		"name": "移动端报表",
+		"icon": "img/iconBb18.png",
+		"tip": "iconTip",
+		"children": [
+			{
+				"name": "会员渠道手机报表",
+				"icon": "",
+				"url": "phone/demoPhone?demoType=xiaoshou"
+			},
+			{
+				"name": "会员渠道pad报表",
+				"icon": "",
+				"url": "phone/demoPad?demoType=xiaoshou"
+			},
+			{
+				"name": "零售手机报表",
+				"icon": "",
+				"url": "phone/demoPhone?demoType=lingshou"
+			},
+			{
+				"name": "零售pad报表",
+				"icon": "",
+				"url": "phone/demoPad?demoType=lingshou"
+			}
+		]
+	},
+	{
+		"name": "组合报表",
+		"icon": "img/iconBb15.png",
+		"tip": "iconTip",
+		"children": [
+			{
+				"name": "交易组合多图表报表",
+				"icon": "",
+				"url": "charts/customer?chartType=useramt2"
+			},
+			{
+				"name": "交易组合单图表报表",
+				"icon": "",
+				"url": "charts/customer?chartType=useramt"
+			},
+			{
+				"name": "多图表组合报表",
+				"icon": "",
+				"url": "charts/customer?chartType=zh-basic"
+			},
+			{
+				"name": "图表组件",
+				"icon": "",
+				"url": "charts/demoCharts?chartType=chart_all"
+			}
+		]
+	},
+	{
+		"name": "多源分片报表",
+		"icon": "img/iconBb6.png",
+		"children": [
+			{
+				"name": "借据租赁物报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=57ac29b387a030c459cd08c0edc0a4e9&iscellauto=0&appNo=01002090214000197"
+			},
+			{
+				"name": "季度对比分析报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=23a58db31668eef064370d9706a3896c"
+			}
+		]
+	},
+	{
+		"name": "分块报表",
+		"icon": "img/iconBb7.png",
+		"children": [
+			{
+				"name": "用户信息报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=b0f44689bd804c43d59d85871a99711c"
+			},
+			{
+				"name": "贷款清单报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=0583c22b583c86e3932142c12c82bf7f"
+			}
+		]
+	},
+	{
+		"name": "详情式报表",
+		"icon": "img/iconBb8.png",
+		"children": [
+			{
+				"name": "入库通知书",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=4&uid=f001db5305e400fe28bb5f3ebac7e451&gage_id=4000325119"
+			},
+			{
+				"name": "循环贷款签约通知书",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=4&uid=783f3f42b295496526029405fdd9a647&pact_no=01002071129000101"
+			},
+			{
+				"name": "保证合同报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=4&uid=0e7586cb76dce6081b0c734bb9e2fd86"
+			},
+			{
+				"name": "个人档案报表",
+				"icon": "",
+				"url": "demoshowType?reporttype=perInfo"
+			}
+		]
+	},
+	{
+		"name": "填报报表",
+		"icon": "img/iconBb9.png",
+		"children": [
+			{
+				"name": "个人档案填报报表",
+				"icon": "",
+				"url": "demoshowType?reporttype=perInfosubmit"
+			},
+			{
+				"name": "事项填报报表",
+				"icon": "",
+				"url": "demoshowType?reporttype=appitem"
+			}
+		]
+	},
+	{
+		"name": "对比分析报表",
+		"icon": "img/iconBb10.png",
+		"children": [
+			{
+				"name": "季度对比分析报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=23a58db31668eef064370d9706a3896c"
+			},
+			{
+				"name": "薪资涨幅比分析报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&skinType=1&uid=654ffebb79617be0705888a0fdec082b"
+			}
+		]
+	},
+	{
+		"name": "扩展加工报表",
+		"icon": "img/iconBb11.png",
+		"children": [
+			{
+				"name": "前台基础报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=7102ae208a4cef4269879853bdbf4b4f&extend=highlight",
+				"xx": "demoshow_grid?reporttype=D&skinType=0&uid=7102ae208a4cef4269879853bdbf4b4f&extend=btn&fixedHead=fixedCol"
+			},
+			{
+				"name": "前台分组报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=cf9b2a7901fc2b9af0e7f4a2b80fbf48&extend=fixedHead,fixedCol"
+			},
+			{
+				"name": "前台处理交叉报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=1ea3e7ef2e8d9bd9a44ba3f24a1417de&extend=fixedHead"
+			},
+			{
+				"name": "前台列扩展报表",
+				"desc":"列排序 ,列拖拽,自定义列",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=63c6b38cccd267cd3ee036706ec224a0&extend=tableSort"
+			},
+			{
+				"name": "后台扩展报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=63c6b38cccd267cd3ee036706ec224a0"
+			}
+		]
+	},
+	{
+		"name": "自定义数据结构报表",
+		"icon": "img/iconBb13.png",
+		"children": [
+			{
+				"name": "用户JSON报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=63c6b38cccd267cd3ee036706ec224a0"
+			},
+			{
+				"name": "用户JSON分组报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=cf9b2a7901fc2b9af0e7f4a2b80fbf48"
+			},
+			{
+				"name": "用户JavaBean报表",
+				"icon": "",
+				"url": "demoshow_grid?reporttype=D&skinType=0&uid=63c6b38cccd267cd3ee036706ec224a0"
+			},
+			{
+				"name": "用户JavaBean分组报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=cf9b2a7901fc2b9af0e7f4a2b80fbf48"
+			}
+		]
+	},
+	{
+		"name": "预警报表",
+		"icon": "img/iconBb14.png",
+		"children": [
+			{
+				"name": "客户风险预警报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=8b9873d6fb7e14e93794ee7fc11cc3a0"
+			},
+			{
+				"name": "五级分类预警报表",
+				"icon": "",
+				"url": "demoshow_nosearch?reporttype=D&skinType=0&uid=7f44da6ada5cab40e6c1848749518038"
+			}
+		]
+	}
+]

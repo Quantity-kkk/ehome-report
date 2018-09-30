@@ -1,0 +1,143 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>报表DEMO例子页面</title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		<link rel="icon" type="image/png" href="/ehome-report/img/favicon.png" />
+		<link rel="stylesheet" href="/ehome-report/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/ehome-report/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="/ehome-report/plugins/jqgrid/ui.jqgrid-bootstrap.css" />
+		<link rel="stylesheet" href="/ehome-report/css/common.css" />
+		<link rel="stylesheet" href="/ehome-report/css/jquery-ui-1.10.4.custom.min.css" />
+		<script type="text/javascript" src="/ehome-report/plugins/jquery/zjcjkdndxjj.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/jquery/jquery.layout.min.js"></script> <!-- 布局控件 -->
+		<script type="text/javascript" src="/ehome-report/plugins/jqgrid/grid.locale-cn.js"></script> <!-- 表格控件 -->
+		<script type="text/javascript" src="/ehome-report/plugins/jqgrid/jquery.jqGrid.min.js"></script> <!-- 表格控件 -->
+		<script type="text/javascript" src="/ehome-report/plugins/vue/vue.min.js"></script> <!-- vue -->
+		<script type="text/javascript" src="/ehome-report/plugins/layui/layer.js"></script> <!-- layui弹窗控件 -->
+		<script type="text/javascript" src="/ehome-report/js/common.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/jquery/jquery-ui-1.10.4.custom.min.js"></script> <!-- 补全搜索插件 -->
+		<!-- echarts begin -->
+		<script type="text/javascript" src="/ehome-report/plugins/echarts/echarts.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/echarts/bmap.min.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/echarts/dataTool.min.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/echarts/ecStat.min.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/echarts/china.js"></script>
+		<!-- echarts end -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<link rel="icon" type="image/png" href="/ehome-report/img/favicon.png" />
+		<link rel="stylesheet" href="/ehome-report/css/repMenu.css" />
+		<script type="text/javascript" src="/ehome-report/js/load.js"></script>
+		<script type="text/javascript" src="/ehome-report/js/repMenu.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/mCustomScrollbar/js/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="/ehome-report/plugins/mCustomScrollbar/js/jquery.mCustomScrollbar.js"></script>
+		<link rel="stylesheet" href="/ehome-report/plugins/mCustomScrollbar/css/jquery.mCustomScrollbar.css" />
+		<script> 
+
+	var appOuterLayout, appMiddleLayout, appWestLayout, appWestWestLayout, appWestMiddleLayout;  //布局对象
+
+	$(document).ready(function () { 
+
+		appOuterLayout = $('body').layout({ 
+			center__paneSelector:	".app-outer-center" 
+		,	west__paneSelector:		".app-outer-west" 
+		,	west__size:				260 
+		,   west__resizable:        false
+		,	spacing_open:			0 
+		,	spacing_closed:			0 
+		}); 
+
+		appMiddleLayout = $('div.app-outer-center').layout({ 
+			center__paneSelector:	".app-center-middle-center" 
+		,	north__paneSelector:		".app-center-middle-north" 
+		,	north__size:				60 
+		,	spacing_open:			0  
+		,	spacing_closed:			0 
+		}); 
+
+		appWestLayout = $('div.app-outer-west').layout({ 
+			center__paneSelector:	".app-west-middle-center" 
+		,	west__paneSelector:		".app-west-middle-west" 
+		,	west__size:				260
+		,	spacing_open:			0  
+		,	spacing_closed:			0  
+		}); 
+		
+		appWestWestLayout = $('div.app-west-middle-west').layout({ 
+			center__paneSelector:	".app-west-inner-center" 
+		,	north__paneSelector:		".app-west-inner-north" 
+		,	south__paneSelector:		".app-west-inner-south" 
+		,	north__size:				50
+		,	south__size:				260
+		,	spacing_open:			0  
+		,	spacing_closed:			0  
+		});
+		
+		appWestMiddleLayout = $('div.app-west-middle-center').layout({ 
+			center__paneSelector:	".app-middle-inner-center" 
+		,	north__paneSelector:		".app-middle-inner-north" 
+		,	north__size:				50
+		,	spacing_open:			0  
+		,	spacing_closed:			0  
+		});
+		
+		//加载菜单数据
+		$.getJSON(contextPath + "json/menu.json",function(meunData){
+			menu.init(meunData);
+		});
+		$(".app-west-inner-center").mCustomScrollbar({
+		    theme:"minimal-dark"
+		});
+	}); 
+	</script>
+		<style>
+	.mCSB_inside > .mCSB_container{ margin-right:0}
+	</style>
+		
+	</head>
+		<a id="contextPath" href="http://192.168.2.101:8080/ehome-report/"></a>
+	<script>
+	    var contextPath = document.getElementById('contextPath').attributes['href'].value;//获取应用的名称
+	</script>
+	
+
+
+
+<body> 
+<div class="app-west-inner-north">
+	<i></i>
+	<p class="downZhu">* 注：RDP报表工具学习交流群：
+		<a href="https://jq.qq.com/?_wv=1027&amp;k=5QTurbk" target="_blank">608126991（点击进群）</a>
+	</p>
+</div>
+	<div class="app-outer-center">
+		<div class="app-center-middle-north"></div> 
+		<div class="app-center-middle-center"></div> 
+	</div> 
+	
+	<div class="app-outer-west">
+		<div class="app-west-middle-west">
+			
+			<div class="app-west-inner-center">
+				<ul class="menu1">
+				</ul>
+			</div>
+		</div>  
+		<div class="app-west-middle-center" id="hidden">
+			<div class="app-middle-inner-north">
+					 <div id="menuInfo"></div> 
+				</div>
+			<div class="app-middle-inner-center">
+				<ul class="menu2">
+			</ul>
+			</div>
+		</div> 
+	</div> 
+ 
+ 
+
+</body>
+</html>

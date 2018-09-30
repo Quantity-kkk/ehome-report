@@ -1,0 +1,24 @@
+body{  margin:0; padding:0; background-color:#ecedef;}
+p{ margin:0; padding:0;}
+div.printhead{border-bottom:1px solid #404040; margin-bottom:20px; overflow:hidden; position:fixed; left:0; top:0; width:100%; background-color:#ecedef; padding:5px 0px;}
+div.print{box-shadow: 4px 4px 3px #ddd; width:780px; height:1100px; background-color:#fff;  margin:0 auto; }
+div.printTop .print_pTopLeft{ width:32px; height:32px; border-right:1px solid #aaa; border-bottom:1px solid #aaa; float:left; margin-top:20px; margin-left:30px;}
+div.printTop .print_pTopRight{ width:32px; height:32px; border-left:1px solid #aaa; border-bottom:1px solid #aaa; float:right;margin-top:20px; margin-right:30px;}
+div.printBottom .print_pBottomLeft{ width:32px; height:32px; border-right:1px solid #aaa; border-top:1px solid #aaa; float:left; margin-top:20px; margin-left:30px;}
+div.printBottom .print_pBottomRight{ width:32px; height:32px; border-left:1px solid #aaa; border-top:1px solid #aaa; float:right;margin-top:20px; margin-right:30px;}
+div.printTitle{ font-size:20px; font-family:"微软雅黑"; color:#1d1d1d; text-align:center; margin-top:50px; font-weight:bolder;}
+div.printTitle span{ font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+div.print table{border-collapse:collapse;border:1px solid #404040; width:700px; margin:0 auto; margin-top:20px; font-size:12px; line-height:32PX;}
+div.print td{border:1px solid #404040;}
+div.print .print_trTitle{ font-weight:bolder;}
+div.print .print_td1{ width:60px;}
+div.print .print_td2{ width:120px;}
+div.print .print_td3{ width:50px;}
+div.print .print_td4{ width:210px;}
+div.print .print_td5{ width:80px;}
+div.print .print_td6{ width:50px;}
+div.printFooter{ width:700px; margin:0 auto; font-size:12px; margin-top:40px;}
+div.printFooter .printFooterLeft{ float:left;}
+div.printFooter .printFooterRight{ float:right;}
+.aPrint{ background-image: url(../../images/StorageBig.png); background-repeat:no-repeat; display:block; width:28px; height:28px;background-position:center center; float:left; margin-left:20px;}
+.aClose{ background-image: url(../../images/close.png); background-repeat:no-repeat; display:block; width:28px; height:28px;background-position:center center; float:left;}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="RptActionAjax" namespace="/" extends="struts-ajax">
+		<action class="report.java.rpt.action.RptConfigAction" method="getdataSourceBeanList" name="getdataSourceBeanList">
+			<result name="success" type="json">
+				<param name="root">dataSourceBeanList</param>
+			</result>
+		</action>
+		
+		<!-- 自定义配置表列表查询 -->
+		<action name="RptConfigAction_getTabList" method="getTabList" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">tabConfigList</param>
+			</result>
+		</action>
+		
+		
+		<!-- 自定义配置表列表查询(加查询条件) -->
+		<action name="RptConfigAction_getSearchTabList" method="getSearchTabList" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">tabConfigList</param>
+			</result>
+		</action>
+
+		<!-- 自定义配置表对应列的列表查询 -->
+		<action name="RptConfigAction_getColList" method="getColList" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">colConfigList</param>
+			</result>
+		</action>
+
+		<!-- 自定义配置表新增 -->
+		<action name="RptConfigAction_insertTab" method="insertTab" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+
+		<!-- 自定义配置列新增 -->
+		<action name="RptConfigAction_insertCol" method="insertCol" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+
+		<!-- 自定义配置表修改 -->
+		<action name="RptConfigAction_updateTab" method="updateTab" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+
+		<!-- 自定义配置列修改 -->
+		<action name="RptConfigAction_updateCol" method="updateCol" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+
+
+		<!-- 根据配置列id获取列实体对象 -->
+		<action name="RptConfigAction_getColById" method="getColById" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">colConfigBean</param>
+			</result>
+		</action>
+
+		<!-- 自定义配置表删除 -->
+		<action name="RptConfigAction_delTabById" method="delTabById" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+
+
+		<!-- 自定义报表生成-sql语句测试 -->
+		<action name="RptCustomAction_sqlTest" method="sqlTest" class="report.java.rpt.action.RptCustomAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">isSuccess</param>
+			</result>
+		</action>
+
+		<!-- 初始化自定义报表检索条件 -->
+		<action class="report.java.rpt.action.RptCustomAction" method="initSearch" name="RptCustomAction_initSearch">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+		<!-- 自定义报表查询 -->
+		<action class="report.java.rpt.action.CustomPreviewAction" method="customPreview" name="CustomPreviewAction_customPreview">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+		<!-- 用户自定义报表列表查询 -->
+		<action name="RptCustomAction_getTabList" method="getTabList" class="report.java.rpt.action.RptCustomAction">
+			<result name="success" type="json">
+				<param name="root">cusReportList</param>
+			</result>
+		</action>
+
+		<!-- 用户自定义报表列表查询(加条件) -->
+		<action name="RptCustomAction_getSearchRepList" method="getSearchRepList" class="report.java.rpt.action.RptCustomAction">
+			<result name="success" type="json">
+				<param name="root">cusReportList</param>
+			</result>
+		</action>
+
+		<!-- 自定义报表删除 -->
+		<action name="RptCustomAction_delRepById" method="delRepById" class="report.java.rpt.action.RptCustomAction">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+		<!-- 自定义报表生成 -->
+		<action name="RptCustomAction_createReport" method="createReport" class="report.java.rpt.action.RptCustomAction">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		
+		
+		<!-- 根据配置表id获取表实体对象 -->
+		<action name="RptConfigAction_getTabById" method="getTabById" class="report.java.rpt.action.RptConfigAction">
+			<result name="success" type="json">
+				<param name="root">tabConfigBean</param>
+			</result>
+		</action>
+		
+		
+		<!-- 自定义配置列删除 -->
+		<action name="RptConfigAction_delColById" method="delColById" class="report.java.rpt.action.RptConfigAction">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="RptAction" namespace="/report/design" extends="struts-cms">
+		<!-- 自定义报表导出 -->
+		<action class="report.java.rpt.action.CustomExportAction" method="customExport" name="CustomExportAction_customExport">
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+        
+<struts>
+	<package name="LoginActionAjax" namespace="/" extends="struts-default,json-default">
+		<!-- 返回json 共用方法 -->
+		<action name="LoginActionAjax_*" method="{1}" class="report.java.login.action.LoginAction">
+		 	<result name="success" type="json">
+                <param name="root">dataMap</param>
+            </result>
+		</action>
+		<action name="sessionFailure" method="sessionFailure" class="report.java.login.action.LoginAction">
+		 	<result type="json">
+                <param name="root">dataMap</param>
+            </result>
+		</action>
+		<action name="otherSysSituation" method="otherSysSituation" class="report.java.login.action.LoginAction">
+		 	<result type="json">
+                <param name="root">dataMap</param>
+            </result>
+		</action>
+	</package>
+	<package name="LoginAction" namespace="/" extends="struts-cms">
+		<action name="login" method="login" class="report.java.login.action.LoginAction">
+			<result name="success">/index.jsp</result>
+			<result name="login">/report/login/login.jsp</result>
+		</action>
+		<action name="logout" method="logout" class="report.java.login.action.LoginAction">
+			<result name="login">/report/login/login.jsp</result>
+		</action>
+   </package>
+</struts>

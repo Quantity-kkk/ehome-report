@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="ReportActionAjax" namespace="/" extends="struts-ajax">
+		<!-- 引擎 -->
+		<action class="report.java.jrreport.action.PreviewAction" method="previewDesign" name="previewDesign">
+			<result name="success" type="json">
+				<param name="contentType">text/html</param>
+				<param name="root">message</param>
+			</result>
+		</action>
+		<!-- 初始化检索条件 -->
+		<action class="report.java.jrreport.action.PreviewReportAction" method="initPreParmExt" name="initPreParmExt">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<!-- 初始化检索条件 -->
+		<action class="report.java.jrreport.action.PreviewReportAction" method="initPreParm" name="initPreParm">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<!-- 初始化检索条件(直接访问时) -->
+		<action class="report.java.jrreport.action.PreviewReportAction" method="initPreParms" name="initPreParms">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<!-- 新预览 -->
+		<action class="report.java.jrreport.action.PreviewReportAction" method="previewDesignNew" name="previewDesignNew">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		<!-- 导出标志 -->
+		<action class="report.java.jrreport.action.ExportAction" method="exportFlag" name="exportFlag">
+			<result name="ajaxsuc" type="json">
+				<param name="root">backFlag</param>
+			</result>
+		</action>
+		
+		<!-- javabean功能 -->
+		<action class="report.java.jrreport.action.PreviewReportAction" method="previewReportJavabean" name="previewReportJavabean">
+			<result name="success" type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+
+		<!-- 保存填报报表 -->
+		<action name="saveFillReport" class="report.java.jrreport.action.FillReportAction" method="saveFillReport">
+			<result name="success" type="json">
+				<param name="root">saveFlag</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="ReportDeisgnAction" namespace="/report/design" extends="struts-cms">
+		<!-- 设计页面预览 新的导出 -->
+		<action class="report.java.jrreport.action.ExportAction" method="exportExcel" name="exportFromDesignNew">
+		</action>
+		<!-- 设计页面预览 新的主子报表导出 -->
+		<action class="report.java.jrreport.action.ExportAction" method="exportFromDesignNew" name="exportSubDesignNew">
+		</action>
+	</package>
+</struts>

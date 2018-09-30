@@ -1,0 +1,545 @@
+* {
+    font-family: "Microsoft YaHei";
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 12px;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, details, dialog, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 24px;
+    background-color: #ffffff;
+}
+
+.ui-layout-pane {
+    padding: 0 !important;
+    border: none !important;
+    background-color: #F6F6F6 !important;
+    overflow: hidden !important;
+}
+
+.A {
+    COLOR: #666666;
+    text-decoration: none;
+}
+
+.A:hover {
+    COLOR: #ff6600;
+    text-decoration: none;
+}
+
+.top {
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 56px;
+    display: block;
+    box-shadow: 0px 2px 9px 0px #d6d6d6;
+}
+
+.panel-iframe {
+    position: relative;
+    height: calc(100% - 90px);
+    width: calc(100% - 36px);
+    left: 18px;
+    top: 17px;
+    border-radius: 10px;
+}
+
+.top .info {
+    display: inline-block;
+    float: right;
+    height: 56px;
+    padding: 5px 10px;
+}
+
+.top .info .user {
+    display: block;
+    font-size: 16px;
+    font-weight:700
+}
+
+.top .info .datetime {
+}
+
+.top .btn-side {
+    width: 56px;
+    border: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    border-right: 2px solid #EEEFF3;
+    background-color: #fff;
+    height: 56px;
+    background: url(../images/shousuo.png);
+    cursor: pointer;
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.side .header {
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: #ffffff; */
+}
+
+.side .header .logo {
+    background-image: url("../../design/images/logo.png");
+    display: block;
+    height: 40px;
+    width: 110px;
+    background-size:90px 36px;
+    /* float: left; */
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    cursor: pointer;
+    margin: 6px;
+}
+
+.main {
+    width: 100%;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.side {
+    float: left;
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #242a2e;
+}
+
+.side a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+.exit {
+    width: 56px;
+    height: 56px;
+    background: url(../images/tuichu.png);
+    float: right;
+    cursor: pointer;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    border-left: 2px solid #EEEFF3;
+}
+
+.menu {
+    width: 202px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.menu-list {
+    transition: all 0.75s;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+    margin-bottom:20px
+}
+
+.menu-list:hover {
+    background: #3f8fe4;
+}
+
+.menu-list:hover .menu-list_right {
+    color: #fff;
+}
+
+.menu-list .menu-list_right {
+    color: #a3a3a3;
+    /* width: 103px; */
+    float: left;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu-list.curr {
+    background: #3f8fe4;
+}
+
+.menu-list.curr .menu-list_right {
+    color: #fff;
+}
+
+.menu.curr .menuleft em {
+    background-image: url(../images/shuju1.png);
+}
+
+.menu:hover .menuleft em {
+    background-image: url(../images/shuju1.png);
+}
+
+.menu-list_left {
+    float: left;
+    width: 35px;
+    height: 40px;
+    margin-left:10px
+}
+
+.menu-list_left em {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menuleft em {
+    background-image: url(../images/shuju.png);
+}
+
+.menuright {
+}
+
+.menu2 {
+}
+
+.menu2.curr .menu2left em {
+    background-image: url(../images/moban1.png);
+}
+
+.menu2:hover .menu2left em {
+    background-image: url(../images/moban1.png);
+}
+
+.menu2left em {
+    background-image: url(../images/moban.png);
+}
+
+.menu2right {
+}
+
+.menu3 {
+}
+
+.menu3.curr .menu3left em {
+    background-image: url(../images/yanshi1.png);
+}
+
+.menu3:hover .menu3left em {
+    background-image: url(../images/yanshi1.png);
+}
+
+.menu3left em {
+    background-image: url(../images/yanshi.png);
+}
+
+.menu3right {
+}
+
+.menu4 {
+}
+
+.menu4.curr .menu4left em {
+    background-image: url(../images/peizhi1.png);
+}
+
+.menu4:hover .menu4left em {
+    background-image: url(../images/peizhi1.png);
+}
+
+.menu4left em {
+    background-image: url(../images/peizhi.png);
+}
+
+.menu4right {
+}
+
+.menu5 {
+}
+
+.menu5.curr .menu5left em {
+    background-image: url(../images/baobiao1.png);
+}
+
+.menu5:hover .menu5left em {
+    background-image: url(../images/baobiao1.png);
+}
+.menu5left em {
+    background-image: url(../images/baobiao.png);
+}
+
+.menu6.curr .menu6left em {
+    background-image: url(../images/shouquan.png);
+}
+
+.menu6:hover .menu6left em {
+    background-image: url(../images/shouquan1.png);
+}
+
+.menu6left em {
+    background-image: url(../images/shouquan.png);
+}
+
+.menu5right {
+}
+
+.content {
+    width: 100%;
+    min-height: 500px;
+    background-color: #FFF;
+    padding-bottom: 30px;
+}
+
+.manage {
+    width: 100%;
+    height: 56px;
+}
+
+.managetitle {
+    width: 117px;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 24px;
+    float: left;
+    font-size: 16px;
+    color: #3f8fe4;
+    font-weight: bold;
+}
+
+.managetitle:BEFORE {
+    content: " ";
+    width: 8px;
+    height: 28px;
+    background-color: #3f8fe4;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0px;
+}
+
+.botton {
+    height: 29px;
+    line-height: 29px;
+    float: right;
+    background: #3f8fe4;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #FFF;
+    cursor: pointer;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+.biaotou td {
+    height: 45px;
+    padding-left: 5px;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    border-bottom: 1px solid #ced5e0;
+}
+
+.tbody td {
+    border-bottom: 1px solid #ced5e0;
+    height: 40px;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.tbody td img {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.tbody a {
+    color: #0e74a2;
+    text-decoration: none;
+    margin-right:20px
+}
+
+.tbody a:hover {
+    text-decoration: underline;
+}
+
+.zi {
+    font-size: 14px;
+    color: #4f4f51;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    /* border-radius: 5px; */
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    z-index: 1;
+}
+
+.wave {
+    opacity: .4;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    background: #0af;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    -webkit-transform-origin: 50% 48%;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    -webkit-animation: drift 3000ms infinite linear;
+    animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+    -webkit-animation: drift 2500ms infinite linear;
+    animation: drift 2500ms infinite linear;
+}
+
+.wave.-two {
+    -webkit-animation: drift 5000ms infinite linear;
+    animation: drift 5000ms infinite linear;
+    opacity: .1;
+    background: #001eff;
+}
+
+.box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top, #7eb2e2, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+    background: linear-gradient(to bottom, #7eb2e2, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+    z-index: 11;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    line-height: 300px;
+    text-align: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: .4em;
+    font-size: 24px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-indent: .3em;
+}
+
+.rdp-table {
+    width: 96%;
+}
+
+.rdp-table tr:HOVER td {
+    background-color: #F7F7F7;
+}
+
+.search {
+    margin-top: 15px;
+    font-size: 14px;
+    float: right;
+}
+
+.search label {
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+.search input {
+    margin-right: 0px;
+    border: 1px solid #e2e2e2;
+    border-right:none;
+    height: 26px;
+    width:200px;
+    padding-left:12px;
+    padding-right:12px;
+    margin-top:-9px;
+    border-top-left-radius:4px;
+   	border-bottom-left-radius:4px;
+   	font-size:12px
+}
+
+.search .sub {
+    background: #cecfce url("../../design/images/sousuo.png") no-repeat center center;
+    color: #fff;
+    border: none;
+    height: 31px;
+   	width:34px;
+   	border:1px solid #e2e2e2;
+   	border-left:none;
+   	border-top-right-radius:4px;
+   	border-bottom-right-radius:4px;
+   	border-top-left-radius:0px;
+   	border-bottom-left-radius:0px;
+   	margin-right:10px;
+   	position:relative;
+   	top:8px;
+   	left:-4px;
+   	cursor:pointer;
+}
+
+@-webkit-keyframes drift {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    from {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes drift {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    from {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

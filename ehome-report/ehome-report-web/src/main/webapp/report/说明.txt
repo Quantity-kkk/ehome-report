@@ -1,0 +1,17 @@
+﻿=============================================================================
+目录结构：
+js：自定义脚本目录
+css：自定义样式目录
+images：自定义图片目录
+lib：引用第三方插件目录（单文件放lib根目录，否则内建文件夹引用）
+rbc：报表设计页面和以后动态页面存放位置
+=============================================================================
+插件列表：
+UI基于jquery v1.11.1（引用其它相关插件请考虑兼容性）【http://jquery.com】
+布局采用jquery.layout 1.4.3【http://layout.jquery-dev.com】
+jQuery UI - v1.11.4【http://jqueryui.com】
+JQuery zTree v3.5.17【http://www.ztree.me】
+jquery validation 1.13.1【http://jqueryvalidation.org】
+客户端存储Jquery store【http://zui.sexy/docs/javascript.html#store】
+颜色选择器spectrum【http://bgrins.github.io/spectrum/】
+Echarts【http://git.oschina.net/free/ECharts/tree/2.2.0.1/】

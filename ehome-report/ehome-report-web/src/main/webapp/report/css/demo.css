@@ -1,0 +1,17 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+div.content_wrap {width: 600px;height:380px;}
+div.content_wrap div.left{float: left;width: 250px;}
+div.content_wrap div.right{float: right;width: 340px;}
+div.zTreeDemoBackground {width:250px;height:362px;text-align:left;}
+ul.ztree {margin-top: 10px;background:#ececec;width:220px;height:360px;}
+#treeDemo ul span{ font-size:14px;}
+#treeDemo span{ font-size:18px; font-family:"微软雅黑"}
+.ztree li span.button.pIcon01_ico_open{margin-right:2px; background:none;vertical-align:top; *vertical-align:middle}
+.ztree li span.button.pIcon01_ico_close{margin-right:2px; background: none; vertical-align:top; *vertical-align:middle}
+
+.ztree li a.curSelectedNode { background:none; border:none;}
+.ztree li{ margin:10px 0;}
+ul.ztree{ margin-left:30px;}
+.ztree li span.button.switch.level0 {visibility:hidden; width:1px;}
+.ztree li ul.level0 {padding:0; background:none;}

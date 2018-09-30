@@ -1,0 +1,389 @@
+/**
+ * It may be useful to copy the below styles and use on your page
+ */
+.dataTable {
+  position: relative;
+  font-family: SimSun;
+  line-height: 1.3em;
+  font-size: 13px;
+}
+
+.dataTable #dataTable table{
+	width:100%
+}
+
+.dataTable table {
+  border-collapse: separate;
+  position: relative;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  border-spacing: 0;
+  table-layout:fixed;
+}
+
+.dataTable th,
+.dataTable td {
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  min-width: 50px;
+  width: 50px;
+  height: 22px;
+  line-height: 16px;
+  /* padding: 0 4px 0 4px; */ /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+  cursor: cell;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+/*�����п�*/
+.htRowHeader{
+  min-width: 26px !important;
+    width: 26px !important;
+}
+.dataTable div.minWidthFix {
+  width: 50px;
+}
+#colHeaderDiv .htColHeader .htRowHeader{
+	 background:url("../images/toolbar.png") no-repeat scroll -217px -10px #fff;
+	 cursor: cell;
+}
+#colHeaderDiv .htColHeader{
+  background:#fff;
+  cursor: default;
+ /*  border-top: 1px solid #648aaf; */
+}
+#colHeaderDiv{
+	-moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;    
+	z-index:10;
+}
+#rowHeaderDiv{
+	-moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;    
+	z-index:9;
+	width:34px;overflow:hidden;
+}
+#rowHeaderDiv .htRowHeader{
+ /* background:url("../../images/des/lefter-bg.png") repeat-y scroll right bottom #f9f9f9;*/
+ background:#fff;
+  cursor: default;
+}
+.dataTable tr:first-child th.htNoFrame,
+.dataTable th:first-child.htNoFrame,
+.dataTable th.htNoFrame {
+  border-left-width: 0;
+  background-color: white;
+  border-color: #FFF;
+}
+
+.dataTable th:first-child,
+.dataTable td:first-child,
+.dataTable .htNoFrame + th,
+.dataTable .htNoFrame + td {
+  border-left: 1px solid #CCC;
+}
+
+.dataTable tr:first-child th,
+.dataTable tr:first-child td {
+  border-top: 1px solid #CCC;
+}
+
+.dataTable thead tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.dataTable thead tr.lastChild th {
+  border-bottom-width: 0;
+}
+
+.dataTable th {
+  background-color: #fff;
+  color: #222;
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.dataTable th .small {
+  font-size: 12px;
+}
+
+.dataTable thead th {
+  padding: 2px 4px;
+}
+
+.dataTable th.c-active {
+  /* background-color: #CCC; */
+  background:#E6E6E6 !important;
+}
+.dataTable th.r-active {
+  /* background-color: #CCC; */
+ background:#E6E6E6 !important;
+}
+
+/* border background */
+.dataTable .htBorderBg {
+  position: absolute;
+  font-size: 0;
+}
+
+.dataTable .htBorderBg.selection {	
+  /*border-image: url("../../images/des/sm-border.png") 3 3 3 3;
+  border-style: solid;*/
+  padding-bottom:2px;
+  border:2px solid #3672b2;
+  z-index: 1;
+  /* filter:alpha(opacity=30);
+	-moz-opacity:0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3; */
+  pointer-events:none;/*�����¼�  */
+}
+.select-inner{
+	/* background: url("../../images/des/selected-bg.png") repeat scroll left top transparent; */
+	cursor: cell;
+    height: 100%;
+    width: 100%;
+}
+/* border line */
+.dataTable .htBorder {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #000;
+  font-size: 0;
+}
+
+.dataTable .htBorder.current {
+ /*  background: #5292F7; */
+  width: 0px;
+  height: 0px;
+  z-index :2;
+}
+
+.dataTable .htBorder.selection {
+ /*  background: #89AFF9; */
+  width: 0px;
+  height: 0px;
+  z-index :2;
+}
+
+/* fill handle */
+.dataTable .htFillHandle {
+  height: 8px;
+  position: absolute;
+  width: 8px;
+  border: medium none;
+  z-index:2;
+  cursor: crosshair;
+  /*cursor: crosshair;*/
+}
+
+.dataTable .htBorder.htFillBorder {
+  background: red;
+  width: 1px;
+  height: 1px;
+}
+
+/* textarea border color */
+textarea.handsontableInput {
+  border: 2px solid #5292F7;
+  outline-width: 0;
+  margin: 0;
+  padding: 1px 4px 0 2px;
+  font-family: Arial, Helvetica, sans-serif; /*repeat from .dataTable (inherit doesn't work with IE<8) */
+  line-height: 1.3em;
+  font-size: 13px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  resize: none;
+  overflow-y: hidden;
+}
+
+.handsontableInputHolder.htHidden textarea.handsontableInput {
+  border-color: #5292F7;
+  background: #5292F7;
+  color: #5292F7;
+}
+
+.handsontableInputHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* legend icons. Needed only if you are using icons in your legend */
+/*.dataTable td {
+ line-height: 21px;
+}
+*/
+.dataTable .icon {
+  cursor: pointer;
+  margin-left: 1px;
+  padding-left: 2px;
+  margin-top: 5px;
+  vertical-align: bottom;
+  float: right;
+}
+
+/* typeahead rules. Needed only if you are using the autocomplete feature */
+.typeahead {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  float: left;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+  background-color: white;
+  border-color: #CCC;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin-top: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.typeahead li {
+  line-height: 18px;
+  display: list-item;
+}
+
+.typeahead a {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.typeahead li > a:hover, .typeahead .active > a, .typeahead .active > a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #08C;
+}
+
+.typeahead a {
+  color: #08C;
+  text-decoration: none;
+}
+.expFun{
+	height: auto;
+    width: auto;
+    z-index: 100;
+	background: none repeat scroll 0 0 white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px 55px 3px 15px;
+    box-shadow: 0 0 25px #999;
+    margin-left: -15px;
+    margin-top: -3px;
+    overflow: visible;
+    position: absolute;
+}
+.expFun span{
+	width:100px;
+	height:25px;
+	color: transparent;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    z-index: -1;
+    font-size: 10pt;
+}
+.exp_flag{
+	 border-bottom: 6px solid transparent;
+    border-left: 6px solid red;
+    border-top: 6px solid transparent;
+    cursor: pointer;
+    left: 0;
+    margin-top: -6px;
+    position: absolute;
+    top: 0;
+}
+.exp_sum{
+	  background-color: #cfdbf3;
+    height: 100%;
+    left: 0;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.exp_average{
+	background-color: #FFE7CE;
+    height: 100%;
+    left: 0;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.exp_count{
+	background-color: #D6BFFF;
+    height: 100%;
+    left: 0;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.exp_discount{
+	background-color: #E5E3E3;
+    height: 100%;
+    left: 0;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.exp_max{
+	background-color: #EDCFE7;
+    height: 100%;
+    left: 0;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.exp_min{
+	background-color: #FFF6D8;
+    height: 100%;
+    left: 0;
+    filter:Alpha(Opacity=10);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
