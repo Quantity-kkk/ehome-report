@@ -1,0 +1,10 @@
+.svn/
+.settings/
+*.sh
+target/
+.classpath
+.project
+bin
+.DS_Store
+*.iml
+.metadata/
