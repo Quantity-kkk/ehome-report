@@ -17,7 +17,7 @@
         <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
         <init-param>
             <param-name>config</param-name>
-            <param-value>struts-default.xml,struts-plugin.xml,/report/resources/struts.xml</param-value>
+            <param-value>struts-default.xml,struts-plugin.xml,struts.xml</param-value>
         </init-param>
     </filter>
     <filter-mapping>

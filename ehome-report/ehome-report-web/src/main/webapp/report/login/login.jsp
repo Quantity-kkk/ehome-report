@@ -139,7 +139,7 @@
 				}
 				
 				$.ajax({
-					url:"/LoginActionAjax_loginAjax.action",
+					url:"<%=basePath%>/LoginActionAjax_loginAjax.action",
 					data:{
 						username:username,
 						password:password
@@ -147,7 +147,7 @@
 					datatype:"json",
 					success:function(result){
 						if(result.flag){
-							location.href="index.jsp";
+							location.href="<%=basePath%>/index.jsp";
 							/* swal({
 								  title: " ",
 								  text: "",

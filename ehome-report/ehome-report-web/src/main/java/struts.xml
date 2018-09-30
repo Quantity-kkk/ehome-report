@@ -6,7 +6,7 @@
 <struts>
 
 <!-- 开发模式 -->
-	<constant name="struts.devMode" value="false"/>
+	<constant name="struts.devMode" value="true"/>
 	<constant name="struts.xwork.chaining.copyErrors" value="true"/>
 	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
 	<constant name="struts.action.extension" value="action"/> 
